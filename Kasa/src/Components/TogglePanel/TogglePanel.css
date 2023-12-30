@@ -1,0 +1,30 @@
+.toggle{
+    background: rgba(246, 246, 246, 1);
+    border-radius: 0  0px 10px 10px;
+    height: auto;
+    width: 100%;
+}
+.visible-pannel{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: #FF6060;
+}
+.visible-pannel h3{
+    color : #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+.visible-pannel img{
+    cursor: pointer;
+}
+.togglePanel{
+    color: #FF6060;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}

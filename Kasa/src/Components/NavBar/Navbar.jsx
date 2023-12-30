@@ -8,7 +8,7 @@ function Navbar() {
       <img src={Logo} alt="logo kasa" className='logo'/>
       <div className="lien">
         <NavLink to='/'>Accueil</NavLink>
-        <NavLink to='/'>A Propos</NavLink>
+        <NavLink to='/a-propos'>A Propos</NavLink>
       </div>
     </nav>
   )

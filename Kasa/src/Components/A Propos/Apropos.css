@@ -1,0 +1,11 @@
+.Apropos{
+    background-image: url('../../assets/bg-Apropos.png');
+}
+.Apropos-container-liste{
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
