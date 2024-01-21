@@ -27,3 +27,11 @@
 .lien a.active{
     text-decoration:underline;
 }
+@media screen and (max-width: 620px){
+    .logo{
+        width: 150px;
+    }
+    .lien a{
+        font-size: 15px;
+    }
+}

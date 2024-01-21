@@ -1,15 +1,21 @@
-import { useParams } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import './Location.css'
+import './Location.css';
 import Data from '../../Data/Data.json';
 import Loader from '../Loader/Loader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import TogglePanel from '../TogglePanel/TogglePanel';
+import Slider from './Components/Slider';
 
 function Location() {
   const [dataLocation, setDataLocation] = useState();
   const [loading, setLoading] = useState(true);
+
   const { locationID } = useParams();
+  const navigate = useNavigate(); 
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,6 +25,10 @@ function Location() {
         const foundData = Data.find(item => item.id === locationID);
         setDataLocation(foundData);
         console.log(foundData);
+
+       if (!foundData) {
+          navigate("NotFound");
+      }
       } catch (error) {
         console.log(error);
       } finally {
@@ -27,8 +37,9 @@ function Location() {
 
     };
     fetchData();
-  }, [locationID]);
+  }, []);
 
+  
   // Fonction pour générer des étoiles
   const renderStars = (rating) => {
     const stars = [];
@@ -41,16 +52,20 @@ function Location() {
     return stars;
   };
 
+  // Fonction pour générer les équipements du TogglePanel
+  function HandleEquipement() {
+    return dataLocation.equipments.map((item, index) => (
+      <li key={index}>{item}</li>
+    ));
+  }
+
   return (
     <>
       {loading ? (
         <Loader />
       ) : (
         <>
-          <div className="banner" style={{ backgroundImage: `url('${dataLocation.cover}')` }}>
-            <div className="bg-sombre location"></div>
-          </div>
-
+          <Slider data={dataLocation}/>
           <div className="container-info-location">
             <div className="bloc-one flex">
               <div className="info-head ">
@@ -71,6 +86,10 @@ function Location() {
               <div className="rating">
                 {renderStars(parseInt(dataLocation.rating))}
               </div>
+            </div>
+            <div className="bloc-three flex">
+                  <TogglePanel title={'Description'} text={dataLocation.description}/>
+                  <TogglePanel title={'Équipements'} text={HandleEquipement()}/>
             </div>
           </div>
         </>
