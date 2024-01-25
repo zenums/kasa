@@ -65,6 +65,7 @@ function Location() {
         <Loader />
       ) : (
         <>
+         <p className="back" onClick={() => navigate(-1)}>Retour</p>
           <Slider data={dataLocation}/>
           <div className="container-info-location">
             <div className="bloc-one flex">
