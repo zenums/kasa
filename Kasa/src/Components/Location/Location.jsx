@@ -4,7 +4,7 @@ import './Location.css';
 import Data from '../../Data/Data.json';
 import Loader from '../Loader/Loader';
 import Slider from './Components/Slider';
-import Head from "./Components/Head";
+import Head from "./Components/Header";
 import Stars from "./Components/Stars";
 import GroupTogglePanel from "./Components/GroupTogglePanel";
 
