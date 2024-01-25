@@ -31,7 +31,7 @@ function Slider({ data }) {
       } else {
         setCurrentPictures(Currentpictures + 1);
       }
-    }dedddddddddddddddddd
+    }
 
     // Retournez l'URL de l'image actuelle, pas la fonction entière
     return picturesData[Currentpictures];
