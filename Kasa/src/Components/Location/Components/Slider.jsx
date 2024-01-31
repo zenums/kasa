@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ArrowLeft from '../../../assets/arrow-left.png';
 import ArrowRight from '../../../assets/arrow-right.png';
+import PropTypes from 'prop-types';
 
 function Slider({ data }) {
   const [Currentpictures, setCurrentPictures] = useState(0);
@@ -56,5 +57,11 @@ function Slider({ data }) {
     </div>
   );
 }
+
+Slider.propTypes = {
+  data: PropTypes.shape({
+    pictures: PropTypes.arrayOf(PropTypes.string),
+  }),
+};
 
 export default Slider;

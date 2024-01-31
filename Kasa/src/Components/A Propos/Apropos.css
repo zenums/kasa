@@ -9,3 +9,8 @@
     align-items: start;
     gap: 20px;
 }
+@media screen and (max-width: 550px){
+    .visible-pannel h3{
+        font-size: 20px;
+    }
+}

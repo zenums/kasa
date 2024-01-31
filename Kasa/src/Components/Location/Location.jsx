@@ -7,6 +7,8 @@ import Slider from './Components/Slider';
 import Head from "./Components/Header";
 import Stars from "./Components/Stars";
 import GroupTogglePanel from "./Components/GroupTogglePanel";
+import GroupTag from "./Components/GroupTag";
+import Profil from "./Components/Profil";
 
 function Location() {
   const [dataLocation, setDataLocation] = useState();
@@ -43,9 +45,17 @@ function Location() {
         <>
           <Slider data={dataLocation}/>
           <div className="container-info-location">
-            <Head dataLocation={dataLocation}/>
-            <Stars dataLocation={dataLocation}/>
-            <GroupTogglePanel dataLocation={dataLocation} title="Equipements"/>
+            <div className="header-location">
+              <div className="bloc-one flex">
+                <Head dataLocation={dataLocation}/> 
+                <GroupTag dataLocation={dataLocation}/>
+              </div>
+              <div className="bloc-two flex">
+                <Profil dataLocation={dataLocation}/>
+                <Stars dataLocation={dataLocation}/>
+              </div>
+            </div>
+            <GroupTogglePanel dataLocation={dataLocation}/>
           </div>
        </>
   );

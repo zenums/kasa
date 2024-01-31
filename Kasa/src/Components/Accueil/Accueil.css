@@ -46,3 +46,13 @@
     font-size: 18px;
     font-weight: 500;
 }
+@media screen and (max-width: 768px){
+    .container-location{
+        padding: 0px;
+        background: none;
+        gap: 20px;
+    }
+    .card-location{
+        flex-basis: 100%;
+    }
+}

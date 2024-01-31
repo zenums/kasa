@@ -12,7 +12,8 @@
 }
 .flex{
     display: flex;
-    gap: 5px;
+    gap: 30px;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
@@ -49,46 +50,60 @@
     color: #fff;
     font-weight: 600;
 }
-.bloc-one{
+.header-location{
     width: 100%;
-    color:#FF6060;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.bloc-one{
+    width: 70%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    color: #fff;
+    align-items: flex-start;
+}
+.info-head {
+    color: #FF6060;
 }
 .bloc-one h1{
     font-size: 30px;
+    font-weight: 400;
 }
 .bloc-one span{
     font-size: 18px;
 }
-.bloc-one .profil{
+.bloc-two{
+    width: 30%;
+    color:#FF6060;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    align-items: flex-end;
+}
+.bloc-two .profil{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-.bloc-one .profil img{
+.bloc-two .profil img{
     clip-path: circle();
     width: 64px;
     height: 64px;
     object-fit: cover;
 }
-.bloc-two{
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color: #fff;
-}
+
 .list-tag{
     list-style-type: none;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
-    width: 45%;
+    width: 100%;
 }
 .list-tag li{
-    width: 33%;
+    width: auto;
     text-align: center;
     background-color: #FF6060;
     padding: 5px 20px;
@@ -110,6 +125,7 @@
     color: rgba(227, 227, 227, 1);
 }
 .bloc-three{
+    flex-direction: row;
     gap: 70px;
     align-items: flex-start;
 }
@@ -118,4 +134,54 @@
 }
 .bloc-three li{
     list-style-type: none;
+}
+@media screen and (max-width : 1024px){
+    .arrow{
+        width: 25px;
+    }
+    .bloc-one h1{
+        font-size: 25px;
+    }
+    .bloc-one span,.list-tag li{
+        font-size: 15px;
+    }
+    
+}
+@media screen and (max-width : 920px){
+    .header-location{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .bloc-one,.bloc-two{
+        width: 100%;
+    }
+    .bloc-two{
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .bloc-three{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+@media screen and (max-width : 768px){
+    .arrow{
+        width: 20px;
+    }
+    .bloc-one h1{
+        font-size: 20px;
+    }
+    .bloc-one span,.list-tag li{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width : 530px){
+    .list-tag{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width : 450px){
+    .list-tag li{
+        flex-grow: 1;
+    }
 }

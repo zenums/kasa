@@ -1,12 +1,11 @@
-import './Apropos.css';
+import Banner from '../Global/Banner/Banner';
 import TogglePanel from '../TogglePanel/TogglePanel';
+import './Apropos.css';
 
 function Apropos() {
   return (
     <>
-      <div className="banner Apropos">
-        <div className="bg-sombre"></div>
-      </div>
+      <Banner component={"Apropos"}/>
       <div className="Apropos-container-liste">
         <TogglePanel title={"Fiabilité"} text={"Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."} />
         <TogglePanel title={"Qualité"} text={"La qualité est notre priorité. Tous les logements proposés sur notre site sont soumis à une sélection rigoureuse. Ils doivent répondre à des critères de confort et de qualité."} />

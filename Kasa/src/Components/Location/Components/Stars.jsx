@@ -16,20 +16,12 @@ function Stars({ dataLocation }) {
   };
 
   return (
-    <div className="bloc-two flex">
-      <ul className="list-tag">
-        {dataLocation.tags.map((tag, index) => (
-          <li key={index}>{tag}</li>
-        ))}
-      </ul>
       <div className="rating">{renderStars(parseInt(dataLocation.rating))}</div>
-    </div>
   );
 }
 
 Stars.propTypes = {
   dataLocation: PropTypes.shape({
-    tags: PropTypes.arrayOf(PropTypes.string),
     rating: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }),
 };
