@@ -29,6 +29,7 @@ function Location() {
        if (!foundData) {
           navigate("NotFound");
       }
+      
       } catch (error) {
         console.log(error);
       } finally {

@@ -1,4 +1,4 @@
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/logo_Kasa.png';
 import './NavBar.css'
 

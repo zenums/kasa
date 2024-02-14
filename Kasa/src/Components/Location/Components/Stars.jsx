@@ -16,7 +16,7 @@ function Stars({ dataLocation }) {
   };
 
   return (
-      <div className="rating">{renderStars(parseInt(dataLocation.rating))}</div>
+      <div className="rating">{renderStars(dataLocation.rating)}</div>
   );
 }
 

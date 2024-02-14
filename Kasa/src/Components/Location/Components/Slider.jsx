@@ -34,7 +34,6 @@ function Slider({ data }) {
       }
     }
 
-    // Retournez l'URL de l'image actuelle, pas la fonction entière
     return picturesData[Currentpictures];
   }
 
